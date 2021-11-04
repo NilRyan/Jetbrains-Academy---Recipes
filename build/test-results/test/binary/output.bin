@@ -9,23 +9,35 @@
 ) =========|_|==============|___/=/_/_/_/
 + :: Spring Boot ::        (v2.3.1.RELEASE)
 
-ﬂ2021-10-27 12:22:04.236  INFO 12672 --- [    Test worker] recipes.RecipesApplication               : Starting RecipesApplication on nil with PID 12672 (started by nilryan in /home/nilryan/IdeaProjects/Recipes/Recipes/task)
-¶2021-10-27 12:22:04.239  INFO 12672 --- [    Test worker] recipes.RecipesApplication               : No active profile set, falling back to default profiles: default
-í2021-10-27 12:22:05.648  INFO 12672 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
-2021-10-27 12:22:05.663  INFO 12672 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-ï2021-10-27 12:22:05.663  INFO 12672 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-ò2021-10-27 12:22:05.730  INFO 12672 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-•2021-10-27 12:22:05.730  INFO 12672 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1444 ms
-ú2021-10-27 12:22:05.987  INFO 12672 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-õ2021-10-27 12:22:06.339  INFO 12672 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-°2021-10-27 12:22:06.382  INFO 12672 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
-©2021-10-27 12:22:06.397  INFO 12672 --- [    Test worker] recipes.RecipesApplication               : Started RecipesApplication in 2.706 seconds (JVM running for 4.742)
-ü2021-10-27 12:22:06.984  INFO 12672 --- [nio-8881-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-é2021-10-27 12:22:06.985  INFO 12672 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-Ü2021-10-27 12:22:06.991  INFO 12672 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+ﬂ2021-11-04 17:10:56.807  INFO 13962 --- [    Test worker] recipes.RecipesApplication               : Starting RecipesApplication on nil with PID 13962 (started by nilryan in /home/nilryan/IdeaProjects/Recipes/Recipes/task)
+¶2021-11-04 17:10:56.810  INFO 13962 --- [    Test worker] recipes.RecipesApplication               : No active profile set, falling back to default profiles: default
+¢2021-11-04 17:10:57.852  INFO 13962 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+∫2021-11-04 17:10:57.926  INFO 13962 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66ms. Found 1 JPA repository interfaces.
+í2021-11-04 17:10:58.467  INFO 13962 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+2021-11-04 17:10:58.481  INFO 13962 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+ï2021-11-04 17:10:58.482  INFO 13962 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+ò2021-11-04 17:10:58.587  INFO 13962 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+•2021-11-04 17:10:58.587  INFO 13962 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1725 ms
+Ä2021-11-04 17:10:58.754  INFO 13962 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+Ö2021-11-04 17:10:58.937  INFO 13962 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+∑2021-11-04 17:10:58.947  INFO 13962 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:file:../recipes_db'
+ú2021-11-04 17:10:59.115  INFO 13962 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+ü2021-11-04 17:10:59.165  INFO 13962 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+ò2021-11-04 17:10:59.224  INFO 13962 --- [         task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+ù2021-11-04 17:10:59.229  WARN 13962 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+û2021-11-04 17:10:59.388  INFO 13962 --- [         task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+ü2021-11-04 17:10:59.532  INFO 13962 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Ÿ2021-11-04 17:11:00.222  INFO 13962 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+©2021-11-04 17:11:00.230  INFO 13962 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+õ2021-11-04 17:11:00.279  INFO 13962 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+°2021-11-04 17:11:00.328  INFO 13962 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+ß2021-11-04 17:11:00.329  INFO 13962 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories‚Ä¶
+ã2021-11-04 17:11:00.510  INFO 13962 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+©2021-11-04 17:11:00.521  INFO 13962 --- [    Test worker] recipes.RecipesApplication               : Started RecipesApplication in 4.028 seconds (JVM running for 4.779)
+ü2021-11-04 17:11:00.992  INFO 13962 --- [nio-8881-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+é2021-11-04 17:11:00.992  INFO 13962 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+Ü2021-11-04 17:11:01.000  INFO 13962 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
 [1;31m
 Start test 2[0m
 [1;31m
 Start test 3[0m
-[1;31m
-Start test 4[0m

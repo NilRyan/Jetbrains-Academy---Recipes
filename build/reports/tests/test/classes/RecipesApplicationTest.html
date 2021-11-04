@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">4.138s</div>
+<div class="counter">5.011s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,142 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="start"></a>
+<h3 class="failures">start</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Wrong answer in test #3
+
+The JSON object shouldn't have the key &quot;id&quot;
+
+Full JSON:
+{
+  &quot;id&quot;: 1,
+  &quot;name&quot;: &quot;Fresh Mint Tea /Test&quot;,
+  &quot;description&quot;: &quot;Light, aromatic and refreshing beverage, ... /Test&quot;,
+  &quot;ingredients&quot;: [
+    &quot;boiled water&quot;,
+    &quot;honey&quot;,
+    &quot;fresh mint leaves /Test&quot;
+  ],
+  &quot;directions&quot;: [
+    &quot;Boil water&quot;,
+    &quot;Pour boiling hot water into a mug&quot;,
+    &quot;Add fresh mint leaves&quot;,
+    &quot;Mix and let the mint leaves seep for 3-5 minutes&quot;,
+    &quot;Add honey and mix again /Test&quot;
+  ]
+}
+
+Please find below the output of your program during this failed test.
+
+---
+
+.   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.1.RELEASE)
+
+2021-11-04 17:10:56.807  INFO 13962 --- [    Test worker] recipes.RecipesApplication               : Starting RecipesApplication on nil with PID 13962 (started by nilryan in /home/nilryan/IdeaProjects/Recipes/Recipes/task)
+2021-11-04 17:10:56.810  INFO 13962 --- [    Test worker] recipes.RecipesApplication               : No active profile set, falling back to default profiles: default
+2021-11-04 17:10:57.852  INFO 13962 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-11-04 17:10:57.926  INFO 13962 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66ms. Found 1 JPA repository interfaces.
+2021-11-04 17:10:58.467  INFO 13962 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+2021-11-04 17:10:58.481  INFO 13962 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-04 17:10:58.482  INFO 13962 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2021-11-04 17:10:58.587  INFO 13962 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-04 17:10:58.587  INFO 13962 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1725 ms
+2021-11-04 17:10:58.754  INFO 13962 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-04 17:10:58.937  INFO 13962 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-04 17:10:58.947  INFO 13962 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:file:../recipes_db'
+2021-11-04 17:10:59.115  INFO 13962 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-04 17:10:59.165  INFO 13962 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-04 17:10:59.224  INFO 13962 --- [         task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2021-11-04 17:10:59.229  WARN 13962 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-04 17:10:59.388  INFO 13962 --- [         task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-11-04 17:10:59.532  INFO 13962 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-11-04 17:11:00.222  INFO 13962 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-04 17:11:00.230  INFO 13962 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-04 17:11:00.279  INFO 13962 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2021-11-04 17:11:00.328  INFO 13962 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+2021-11-04 17:11:00.329  INFO 13962 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-11-04 17:11:00.510  INFO 13962 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-11-04 17:11:00.521  INFO 13962 --- [    Test worker] recipes.RecipesApplication               : Started RecipesApplication in 4.028 seconds (JVM running for 4.779)
+2021-11-04 17:11:00.992  INFO 13962 --- [nio-8881-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-04 17:11:00.992  INFO 13962 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-04 17:11:01.000  INFO 13962 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:155)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -78,13 +207,13 @@
 </tr>
 </thead>
 <tr>
-<td class="success">start</td>
-<td class="success">4.138s</td>
-<td class="success">passed</td>
+<td class="failures">start</td>
+<td class="failures">5.011s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
 <pre>?[1;31m
@@ -98,26 +227,38 @@ Start test 1?[0m
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.3.1.RELEASE)
 
-2021-10-27 12:22:04.236  INFO 12672 --- [    Test worker] recipes.RecipesApplication               : Starting RecipesApplication on nil with PID 12672 (started by nilryan in /home/nilryan/IdeaProjects/Recipes/Recipes/task)
-2021-10-27 12:22:04.239  INFO 12672 --- [    Test worker] recipes.RecipesApplication               : No active profile set, falling back to default profiles: default
-2021-10-27 12:22:05.648  INFO 12672 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
-2021-10-27 12:22:05.663  INFO 12672 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-10-27 12:22:05.663  INFO 12672 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2021-10-27 12:22:05.730  INFO 12672 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-10-27 12:22:05.730  INFO 12672 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1444 ms
-2021-10-27 12:22:05.987  INFO 12672 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-10-27 12:22:06.339  INFO 12672 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-2021-10-27 12:22:06.382  INFO 12672 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
-2021-10-27 12:22:06.397  INFO 12672 --- [    Test worker] recipes.RecipesApplication               : Started RecipesApplication in 2.706 seconds (JVM running for 4.742)
-2021-10-27 12:22:06.984  INFO 12672 --- [nio-8881-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-27 12:22:06.985  INFO 12672 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-10-27 12:22:06.991  INFO 12672 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2021-11-04 17:10:56.807  INFO 13962 --- [    Test worker] recipes.RecipesApplication               : Starting RecipesApplication on nil with PID 13962 (started by nilryan in /home/nilryan/IdeaProjects/Recipes/Recipes/task)
+2021-11-04 17:10:56.810  INFO 13962 --- [    Test worker] recipes.RecipesApplication               : No active profile set, falling back to default profiles: default
+2021-11-04 17:10:57.852  INFO 13962 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-11-04 17:10:57.926  INFO 13962 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66ms. Found 1 JPA repository interfaces.
+2021-11-04 17:10:58.467  INFO 13962 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+2021-11-04 17:10:58.481  INFO 13962 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-04 17:10:58.482  INFO 13962 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2021-11-04 17:10:58.587  INFO 13962 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-04 17:10:58.587  INFO 13962 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1725 ms
+2021-11-04 17:10:58.754  INFO 13962 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-04 17:10:58.937  INFO 13962 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-04 17:10:58.947  INFO 13962 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:file:../recipes_db'
+2021-11-04 17:10:59.115  INFO 13962 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-04 17:10:59.165  INFO 13962 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-04 17:10:59.224  INFO 13962 --- [         task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2021-11-04 17:10:59.229  WARN 13962 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-04 17:10:59.388  INFO 13962 --- [         task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-11-04 17:10:59.532  INFO 13962 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-11-04 17:11:00.222  INFO 13962 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-04 17:11:00.230  INFO 13962 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-04 17:11:00.279  INFO 13962 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2021-11-04 17:11:00.328  INFO 13962 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+2021-11-04 17:11:00.329  INFO 13962 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-11-04 17:11:00.510  INFO 13962 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-11-04 17:11:00.521  INFO 13962 --- [    Test worker] recipes.RecipesApplication               : Started RecipesApplication in 4.028 seconds (JVM running for 4.779)
+2021-11-04 17:11:00.992  INFO 13962 --- [nio-8881-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-04 17:11:00.992  INFO 13962 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-04 17:11:01.000  INFO 13962 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
 ?[1;31m
 Start test 2?[0m
 ?[1;31m
 Start test 3?[0m
-?[1;31m
-Start test 4?[0m
 </pre>
 </span>
 </div>
@@ -129,7 +270,7 @@ Start test 4?[0m
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1.1</a> at 27 Oct 2021, 12:22:07 PM</p>
+<a href="http://www.gradle.org">Gradle 7.1.1</a> at 4 Nov 2021, 5:11:01 PM</p>
 </div>
 </div>
 </body>
