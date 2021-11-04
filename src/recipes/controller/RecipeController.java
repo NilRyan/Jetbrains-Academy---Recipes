@@ -26,13 +26,26 @@ public class RecipeController {
     }
 
     @PostMapping(path = "/new", produces = "application/json")
-    public String addRecipe(@Validated @RequestBody RecipeFormDto recipeFormDto) {
+    public String addRecipe(@Valid @RequestBody RecipeFormDto recipeFormDto) {
         RecipeEntity newRecipe = recipeService.addRecipe(recipeFormDto);
         return "{ \"id\": " + newRecipe.getId() + " }";
     }
 
     @GetMapping("/{id}")
-    public RecipeEntity getRecipe(@PathVariable long id) {
-        return recipeService.getRecipe(id);
+    public RecipeFormDto getRecipe(@PathVariable long id) {
+        RecipeEntity recipeEntity = recipeService.getRecipe(id);
+        RecipeFormDto recipe = new RecipeFormDto(
+                recipeEntity.getName(),
+                recipeEntity.getDescription(),
+                recipeEntity.getIngredients(),
+                recipeEntity.getDirections()
+        );
+        return recipe;
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void removeRecipe(@PathVariable long id) {
+        recipeService.removeRecipe(id);
     }
 }

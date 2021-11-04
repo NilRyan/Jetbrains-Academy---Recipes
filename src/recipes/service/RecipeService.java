@@ -37,4 +37,11 @@ public class RecipeService {
         }
         return recipe.get();
     }
+
+    public void removeRecipe(long id) {
+        if (!recipeRepository.existsById(id)) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+        recipeRepository.deleteById(id);
+    }
 }
