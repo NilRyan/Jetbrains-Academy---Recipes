@@ -8,6 +8,7 @@ import recipes.dto.RecipeFormDto;
 import recipes.model.RecipeEntity;
 import recipes.repository.RecipeRepository;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Service
@@ -25,7 +26,9 @@ public class RecipeService {
                 recipeFormDto.getName(),
                 recipeFormDto.getDescription(),
                 recipeFormDto.getIngredients(),
-                recipeFormDto.getDirections()
+                recipeFormDto.getDirections(),
+                recipeFormDto.getCategory(),
+                LocalDateTime.now()
         );
         return recipeRepository.save(newRecipe);
     }

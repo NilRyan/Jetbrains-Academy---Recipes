@@ -4,6 +4,8 @@ import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
@@ -17,22 +19,27 @@ public class RecipeEntity {
     private String description;
     private String[] ingredients;
     private String[] directions;
+    private String category;
+    private LocalDateTime date;
 
-    public RecipeEntity(long id, String name, String description, String[] ingredients, String[] directions) {
+    public RecipeEntity(long id, String name, String description, String[] ingredients, String[] directions, String category, LocalDateTime date) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.ingredients = ingredients;
         this.directions = directions;
+        this.category = category;
+        this.date = date;
     }
 
-    public RecipeEntity(String name, String description, String[] ingredients, String[] directions) {
+    public RecipeEntity(String name, String description, String[] ingredients, String[] directions, String category, LocalDateTime date) {
         this.name = name;
         this.description = description;
         this.ingredients = ingredients;
         this.directions = directions;
+        this.category = category;
+        this.date = date;
     }
-
 
     public RecipeEntity() {
     }
@@ -71,5 +78,22 @@ public class RecipeEntity {
 
     public void setDirections(String[] directions) {
         this.directions = directions;
+    }
+
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public LocalDateTime getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDateTime date) {
+        this.date = date;
     }
 }

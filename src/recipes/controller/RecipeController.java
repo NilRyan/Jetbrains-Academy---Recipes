@@ -38,7 +38,9 @@ public class RecipeController {
                 recipeEntity.getName(),
                 recipeEntity.getDescription(),
                 recipeEntity.getIngredients(),
-                recipeEntity.getDirections()
+                recipeEntity.getDirections(),
+                recipeEntity.getCategory(),
+                recipeEntity.getDate()
         );
         return recipe;
     }
