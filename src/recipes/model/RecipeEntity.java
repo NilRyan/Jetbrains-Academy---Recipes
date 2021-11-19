@@ -1,5 +1,6 @@
 package recipes.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
@@ -14,6 +15,7 @@ import java.time.LocalDateTime;
 public class RecipeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private long id;
     private String name;
     private String description;
@@ -44,6 +46,7 @@ public class RecipeEntity {
     public RecipeEntity() {
     }
 
+    @JsonIgnore
     public long getId() {
         return id;
     }

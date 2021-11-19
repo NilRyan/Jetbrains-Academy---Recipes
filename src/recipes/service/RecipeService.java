@@ -8,7 +8,10 @@ import recipes.dto.RecipeFormDto;
 import recipes.model.RecipeEntity;
 import recipes.repository.RecipeRepository;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Locale;
 import java.util.Optional;
 
 @Service
@@ -47,4 +50,25 @@ public class RecipeService {
         }
         recipeRepository.deleteById(id);
     }
+
+    public void updateRecipe(long id, RecipeFormDto recipeFormDto) {
+        RecipeEntity recipe = getRecipe(id);
+        recipe.setDate(LocalDateTime.now());
+        recipe.setName(recipeFormDto.getName());
+        recipe.setCategory(recipeFormDto.getCategory());
+        recipe.setDescription(recipeFormDto.getDescription());
+        recipe.setIngredients(recipeFormDto.getIngredients());
+        recipe.setDirections(recipeFormDto.getDirections());
+
+        recipeRepository.save(recipe);
+    }
+
+    public List<RecipeEntity> getRecipeByCategory(String category) {
+        return recipeRepository.findByCategoryIsAllIgnoreCaseOrderByDateDesc(category);
+    }
+
+    public List<RecipeEntity> getRecipeByName(String name) {
+        return recipeRepository.findByNameContainsIgnoreCaseOrderByDateDesc(name);
+    }
+
 }
